@@ -13,7 +13,7 @@ spec:
           - key: hardware
             operator: In
             values:
-            - gpu
+            - us-east-1c
   containers:
   - name: nginx
     image: nginx
