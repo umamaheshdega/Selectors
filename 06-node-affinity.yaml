@@ -19,10 +19,6 @@ spec:
   - name: nginx
     image: nginx
   tolerations:
-  - key: "hardware"
-    operator: "Equal"
-    value: "gpu"
-    effect: "NoExecute"
   - key: "topology.kubernetes.io/zone"
     operator: "Equal"
     value: "us-east-1b"
