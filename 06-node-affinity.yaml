@@ -1,0 +1,26 @@
+kind : Pod
+apiVersion: v1
+metadata: 
+  name: affinity
+  labels:
+    purpose: "affinity_demo"
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: hardware
+            operator: In
+            values:
+            - gpu
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1c
+  containers:
+  - name: nginx
+    image: nginx
+  tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "gpu"
+    effect: "NoExecute"
