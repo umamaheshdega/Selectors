@@ -11,10 +11,10 @@ spec:
   - name: nginx
     image: nginx
   tolerations:
-  - key: "hardware"
-    operator: "Equal"
-    value: "gpu"
-    effect: "NoSchedule"
+  # - key: "hardware"
+  #   operator: "Equal"
+  #   value: "gpu"
+  #   effect: "NoSchedule"
   - key: "hardware"
     operator: "Equal"
     value: "gpu"
