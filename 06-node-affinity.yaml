@@ -11,9 +11,14 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
           - key: hardware
-            operator: NotIn
+            operator: In
             values:
             - gpu
   containers:
   - name: nginx
     image: nginx
+  tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "gpu"
+    effect: "NoExecute
