@@ -10,10 +10,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: topology.kubernetes.io/zone
+          - key: hardware
             operator: In
             values:
-            - us-east-1b
+            - gpu
             
   containers:
   - name: nginx
@@ -26,4 +26,8 @@ spec:
   - key: "topology.kubernetes.io/zone"
     operator: "Equal"
     value: "us-east-1c"
+    effect: "NoSchedule"
+  - key: "topology.kubernetes.io/zone"
+    operator: "Equal"
+    value: "us-east-1b"
     effect: "NoSchedule"
