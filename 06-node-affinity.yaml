@@ -21,9 +21,9 @@ spec:
   tolerations:
   - key: "topology.kubernetes.io/zone"
     operator: "Equal"
-    value: "us-east-1b"
+    value: "us-east-1c"
     effect: "NoSchedule"
   - key: "topology.kubernetes.io/zone"
     operator: "Equal"
-    value: "us-east-1b"
+    value: "us-east-1c"
     effect: "NoExecute"
