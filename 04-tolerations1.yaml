@@ -3,7 +3,7 @@ apiVersion: v1
 metadata: 
   name: tolerations2
   labels:
-    purpose: "tolerations2_demo"
+    purpose: "tolerations_demo"
 spec:
   nodeSelector:
     topology.kubernetes.io/zone: us-east-1c
