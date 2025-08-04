@@ -11,7 +11,7 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
           - key: hardware
-            operator: In
+            operator: NotIn
             values:
             - gpu
   containers:
