@@ -14,7 +14,7 @@ spec:
             operator: In
             values:
             - us-east-1c
-            - us-east-1c
+            - us-east-1b
   containers:
   - name: nginx
     image: nginx
