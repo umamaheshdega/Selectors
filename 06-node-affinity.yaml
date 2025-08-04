@@ -29,5 +29,5 @@ spec:
     effect: "NoSchedule"
   - key: "topology.kubernetes.io/zone"
     operator: "Equal"
-    value: "us-east-1b"
-    effect: "NoSchedule"
+    value: "us-east-1c"
+    effect: "NoExecute"
